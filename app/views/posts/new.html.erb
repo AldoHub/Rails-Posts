@@ -1,0 +1,21 @@
+<div>
+    <h2>Add a new post</h2>
+    
+    <!-- build the form -->
+    <%= form_for @post, url: {action: "create"} do |f| %>
+        <div>
+            <%= f.label :title %>
+            <%= f.text_field :title%>
+        </div>
+        <div>
+            <%= f.label :content %>
+            <%= f.text_area :content%>
+        </div>
+        <div>
+            <%= f.label :cover %>
+            <%= f.file_field :cover%>
+        </div>
+        <%= f.submit %>
+    <% end %>
+
+</div>
